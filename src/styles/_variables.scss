@@ -1,0 +1,20 @@
+$container-width-value: 1180;
+$container-padding-inline-value: 210;
+
+:root {
+    --container-width: #{$container-width-value}px;
+    --container-padding-inline: #{$container-padding-inline-value}px;
+    --button-height: 50px;
+    --color-light: #fff;
+    --color-dark: #172755;
+    --ccolor-blue: #0088f0;
+    --color-bg: #F8F9FF;
+    --color-accent: #ef2a82;
+    --chart-lines: #eeeef6;
+    --text-color-main: #172755;
+    --text-color-secondary: #8794ba;
+    --font-family: "Roboto", serif;
+
+    --buttonSecondaryBorderColor: #2A407C;
+    --buttonMenuBorderColor: #465B95;
+}
