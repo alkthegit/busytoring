@@ -6,4 +6,8 @@
         --logo-vector-color: var(--text-color-secondary);
         --logo-text-color: var(--text-color-secondary);
     }
+    
+    &:hover {
+        --logo-text-color: var(--color-accent);
+    }
 }
