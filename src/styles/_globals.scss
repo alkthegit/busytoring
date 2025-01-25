@@ -1,0 +1,21 @@
+@use 'mixins' as *;
+
+body {
+    font-family: var(--font-family);
+    background: var(--color-bg);
+    color: var(--text-color-secondary);
+}
+
+// .container {
+//     @include min-max(320px, 100%);
+// }
+
+.wrap {
+    @include min-max(320px, 1180px);
+}
+
+p,
+a,
+button {
+    color: var(--text-color-secondary);
+}

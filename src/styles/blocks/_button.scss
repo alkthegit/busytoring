@@ -1,0 +1,47 @@
+@use '../mixins' as *;
+
+.button {
+    @include button-reset;
+
+    cursor: pointer;
+
+    width: 238px;
+    height: var(--button-height);
+    color: var(--color-light);
+    border-radius: calc(var(--button-height) / 2);
+    background-color: var(--color-accent);
+
+    font-size: 16px;
+
+    &--secondary {
+        background-color: transparent;
+        border: 1px solid var(--buttonSecondaryBorderColor);
+    }
+
+    &--menu {
+        --button-height: 40px;
+        width: 161px;
+        background-color: transparent;
+        border: 1px solid var(--buttonMenuBorderColor);
+        color: var(--text-color-secondary);
+
+        &:hover {
+            color: var(--color-light);
+            border-color: var(--color-light);
+        }
+
+    }
+
+    &--text {
+        width: 50px;
+        height: unset;
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        color: var(--text-color-secondary);
+
+        &:hover {
+            color: var(--color-light);
+        }
+    }
+}

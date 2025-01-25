@@ -1,0 +1,9 @@
+.logo {
+    --logo-vector-color: var(--color-accent);
+    --logo-text-color: var(--color-light);
+
+    &--secondary {
+        --logo-vector-color: var(--text-color-secondary);
+        --logo-text-color: var(--text-color-secondary);
+    }
+}
