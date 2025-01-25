@@ -1,0 +1,20 @@
+{
+  "name": "positivus",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "build:dev": "vite build --mode development",
+    "build:stage": "vite build --mode staging",
+    "deploy:stage": "npm run build:stage && git -C ./dist add . && git -C ./dist commit -m \"build: GitHub pages\" && git -C ./dist push",
+    "deploy:dev": "npm run build:dev && git -C ./dist add . && git -C ./dist commit -m \"build: GitHub pages\" && git -C ./dist push"},
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "sass-embedded": "^1.83.4",
+    "vite": "^6.0.5",
+    "vite-plugin-handlebars": "^2.0.0"
+  }
+}
