@@ -32,7 +32,10 @@
         @include desktop{
             column-gap: 20px;
             padding-block: 30px;
+        }
 
+        @include xs{
+            padding-block: 20px;
         }
     }
 
@@ -112,10 +115,6 @@
         margin-left: auto;
     }
 
-    @include tablet{
-        padding-inline: calc(50px - var(--container-padding-inline));
-    }
-    
     &__up {
         @include tablet{
             max-width: 120px;
