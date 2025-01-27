@@ -74,7 +74,7 @@ $xxl: 1600px; // < xxl
 }
 
 @mixin media-breakpoint-down($bp) {
-    @media (width < $bp) {
+    @media (max-width: #{calc($bp - 0.02px)}) {
         @content;
     }
 }
