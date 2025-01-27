@@ -1,5 +1,5 @@
 $container-width-value: 1180;
-$container-padding-inline-value: 210;
+$container-padding-inline-value: 20;
 
 :root {
     --container-width: #{$container-width-value}px;
@@ -17,4 +17,5 @@ $container-padding-inline-value: 210;
 
     --buttonSecondaryBorderColor: #2A407C;
     --buttonMenuBorderColor: #465B95;
+    --transitionDuration: 0.2s;
 }

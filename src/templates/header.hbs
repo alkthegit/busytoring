@@ -9,7 +9,7 @@
             </svg>
         </a>
         <div class="header__actions">
-            <nav class="header__menu"
+            <nav class="header__menu hidden-mobile"
                 aria-label="main navigation menu">
                 <menu class="header__menu-list"
                     aria-label="navigation links">
@@ -40,9 +40,41 @@
                     </li>
                 </menu>
             </nav>
-            <div class="header__buttons">
-                <button class="header__button button button--text">Sign in</button>
-                <button class="header__button button button--menu">Sign Up</button>
+            <div class="header__buttons buttons">
+                <button class="buttons__in button button--text">Sign in</button>
+                <button class="buttons__up button button--menu hidden-mobile">Sign Up</button>
+                <aside class="mobile-menu visible-mobile">
+                    <label for="mobileMenuToggler"></label>
+                    <input class="header__burger-button"
+                        type="checkbox"
+                        name="mobileMenuToggler"
+                        id="mobileMenuToggler">
+                    <nav class="header__mobile-menu">
+                        <ul class="header__mobile-menu-list">
+                            <li class="header__mobile-menu-item">
+                                <a href="/"
+                                    class="header__mobile-menu-link">Products</a>
+                            </li>
+                            <li class="header__mobile-menu-item">
+                                <a href="/"
+                                    class="header__mobile-menu-link">Pricing</a>
+                            </li>
+                            <li class="header__mobile-menu-item">
+                                <a href="/"
+                                    class="header__mobile-menu-link">FAQ</a>
+                            </li>
+                            <li class="header__mobile-menu-item">
+                                <a href="/"
+                                    class="header__mobile-menu-link">Blog</a>
+                            </li>
+                            <li class="header__mobile-menu-item">
+                                <a href="/"
+                                    class="header__mobile-menu-link">Blog</a>
+                            </li>
+                        </ul>
+                
+                    </nav>
+                </aside>
             </div>
         </div>
     </div>

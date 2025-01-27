@@ -192,6 +192,10 @@ body {
     overflow-x: hidden;
 }
 
+body {
+    margin: 0;
+}
+
 :where(ul[class], menu[class]) {
     list-style: none;
 }

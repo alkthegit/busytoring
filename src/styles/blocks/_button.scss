@@ -1,18 +1,20 @@
 @use '../mixins' as *;
 
 .button {
+    --btnTextColor: var(--color-light);
     @include button-reset;
 
     cursor: pointer;
 
     width: 238px;
     height: var(--button-height);
-    color: var(--color-light);
+    color: var(--btnTextColor);
     border-radius: calc(var(--button-height) / 2);
     background-color: var(--color-accent);
 
     font-size: 16px;
 
+    transition: all var(--transitionDuration) ease-in;
     &--secondary {
         background-color: transparent;
         border: 1px solid var(--buttonSecondaryBorderColor);
@@ -23,10 +25,10 @@
         width: 161px;
         background-color: transparent;
         border: 1px solid var(--buttonMenuBorderColor);
-        color: var(--text-color-secondary);
+        --btnTextColor: var(--text-color-secondary);
 
         &:hover {
-            color: var(--color-light);
+            --btnTextColor: var(--color-light);
             border-color: var(--color-light);
         }
 
@@ -38,10 +40,10 @@
         background-color: transparent;
         border: none;
         border-radius: 0;
-        color: var(--text-color-secondary);
+        --btnTextColor: var(--text-color-secondary);
 
         &:hover {
-            color: var(--color-light);
+            --btnTextColor: var(--color-light);
         }
     }
 }

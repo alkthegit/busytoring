@@ -1,6 +1,14 @@
+@use '../media' as *;
+
 .logo {
     --logo-vector-color: var(--color-accent);
     --logo-text-color: var(--color-light);
+
+    @include xs {
+        svg {
+            width: 138px;
+        }
+    }
 
     &--secondary {
         --logo-vector-color: var(--text-color-secondary);
@@ -9,5 +17,10 @@
     
     &:hover {
         --logo-text-color: var(--color-accent);
+        
+        svg *{
+            transition: all 1s ease-in;
+        }
     }
+
 }
