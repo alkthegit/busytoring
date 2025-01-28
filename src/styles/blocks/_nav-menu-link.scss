@@ -1,0 +1,29 @@
+.nav-menu-link {
+    padding-bottom: 1px;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        translate: -50%;
+        width: 0;
+        height: 1px;
+        background-color: var(--color-light);
+        transition: all var(--transitionDuration) ease-in;
+    }
+
+    &:hover,
+    &:hover::after {
+        transition: all var(--transitionDuration) ease-in;
+    }
+
+    &:hover {
+        color: var(--color-light);
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+}

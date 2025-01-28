@@ -1,0 +1,86 @@
+/* ⚠️ Верхние границы (не включая само значение) */
+$xxs: 376px; // (еще меньше (iPhone SE - 375))
+$xs: 576px; // < sm
+$mobile: 768px; // < md
+$tablet: 992px; // < lg
+$desktop: 1200px; // < xl
+$desktop-xl: 1400px; // < xxl
+$xxl: 1600px; // < xxl
+
+@mixin xs {
+    @include media-breakpoint-down($xs) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @include media-breakpoint-down($mobile) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @include media-breakpoint-down($tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @include media-breakpoint-down($desktop) {
+        @content;
+    }
+}
+
+@mixin desktop-xl {
+    @include media-breakpoint-down($desktop-xl) {
+        @content;
+    }
+}
+
+@mixin xxl {
+    @include media-breakpoint-down($xxl) {
+        @content;
+    }
+}
+
+@mixin mobile-up {
+    @include media-breakpoint-up($mobile) {
+        @content;
+    }
+}
+
+@mixin tablet-up {
+    @include media-breakpoint-up($tablet) {
+        @content;
+    }
+}
+
+@mixin desktop-up {
+    @include media-breakpoint-up($desktop) {
+        @content;
+    }
+}
+
+@mixin desktop-xl-up {
+    @include media-breakpoint-up($desktop-xl) {
+        @content;
+    }
+}
+
+@mixin desktop-xxl-up {
+    @include media-breakpoint-up($desktop-xxl) {
+        @content;
+    }
+}
+
+@mixin media-breakpoint-down($bp) {
+    @media (max-width: #{calc($bp - 0.02px)}) {
+        @content;
+    }
+}
+
+@mixin media-breakpoint-up($bp) {
+    @media (min-width: $bp) {
+        @content;
+    }
+}

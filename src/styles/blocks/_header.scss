@@ -1,13 +1,45 @@
+@use '../media' as *;
+@use './nav-menu-link' as *;
+
 .header {
+    --headerPaddingInline: calc(210px - var(--container-padding-inline));
+    --headerPaddingBlock: 50px;
+    --headerContentHeight: 40px;
+
+    padding-inline: var(--headerPaddingInline);
+    background-color: var(--color-dark);
+
+    @include desktop-xl {
+        --headerPaddingInline: calc(150px - var(--container-padding-inline));
+    }
+
+    @include desktop {
+        --headerPaddingInline: calc(100px - var(--container-padding-inline));
+    }
+
+    @include tablet {
+        --headerPaddingInline: calc(20px - var(--container-padding-inline));
+        --headerContentHeight: 30px;
+    }
 
     &__inner {
-        padding-top: 50px;
-        padding-bottom: 74px;
+        padding-block: var(--headerPaddingBlock);
         display: flex;
         align-items: center;
         column-gap: 80px;
 
-        background-color: var(--color-dark);
+        @include desktop-xl {
+            column-gap: 50px;
+        }
+
+        @include desktop {
+            column-gap: 20px;
+            --headerPaddingBlock: 30px;
+        }
+
+        @include xs {
+            --headerPaddingBlock: 20px;
+        }
     }
 
     &__actions {
@@ -15,6 +47,7 @@
         flex-grow: 1;
         justify-content: space-between;
         align-items: center;
+
     }
 
     &__menu {
@@ -22,40 +55,77 @@
             display: flex;
             column-gap: 36px;
             align-items: center;
+
+            @include desktop-xl {
+                column-gap: 30px;
+            }
+
+            @include desktop {
+                column-gap: 20px;
+            }
         }
 
         &-link {
-            padding-bottom: 1px;
-            position: relative;
+            @extend .nav-menu-link;
+            // padding-bottom: 1px;
+            // position: relative;
 
-            &::after {
-                content: "";
-                position: absolute;
-                bottom:0;
-                left: 50%;
-                translate: -50%;
-                width: 0;
-                height: 1px;
-                background-color: var(--color-light);
+            // &::after {
+            //     content: "";
+            //     position: absolute;
+            //     bottom: 0;
+            //     left: 50%;
+            //     translate: -50%;
+            //     width: 0;
+            //     height: 1px;
+            //     background-color: var(--color-light);
+            //     transition: all var(--transitionDuration) ease-in;
+            // }
 
-                transition: width 0.2s ease-in;
-            }
+            // &:hover,
+            // &:hover::after {
+            //     transition: all var(--transitionDuration) ease-in;
+            // }
 
-            &:hover{
-                color: var(--color-light);
-            }
-            &:hover::after{
-                width: 100%;
-            }
-            
+            // &:hover {
+            //     color: var(--color-light);
+            // }
+
+            // &:hover::after {
+            //     width: 100%;
+            // }
         }
-
     }
 
     &__buttons {
         display: flex;
         justify-content: space-between;
+        justify-content: end;
+
         align-items: center;
         column-gap: 40px;
+
+        @include desktop-xl {
+            column-gap: 30px;
+        }
+
+        @include desktop {
+            column-gap: 25px;
+        }
+
+        @include mobile {
+            margin-left: auto;
+        }    
+
+        &__in {
+            flex-shrink: 0;
+        }
+
+        &__up {
+            @include tablet {
+                max-width: 120px;
+            }
+        }        
     }
+
 }

@@ -1,7 +1,25 @@
-@use 'variables';
+@use 'variables' as *;
+@use 'media' as *;
 
 .container {
     max-width: calc(var(--container-width) + 2 * var(--container-padding-inline));
     padding-inline: var(--container-padding-inline);
     margin-inline: auto;
+}
+.container-dynamic {
+    padding-inline: calc((100% - var(--container-width)) / 2);
+}
+.visible-mobile {
+    @include mobile-up {
+        display: none;
+    }
+}
+
+.hidden-mobile {
+    @include mobile {
+        display: none;
+    }
+}
+.hidden {
+    display: none !important;
 }

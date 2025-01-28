@@ -9,7 +9,7 @@
             </svg>
         </a>
         <div class="header__actions">
-            <nav class="header__menu"
+            <nav class="header__menu hidden-mobile"
                 aria-label="main navigation menu">
                 <menu class="header__menu-list"
                     aria-label="navigation links">
@@ -40,9 +40,10 @@
                     </li>
                 </menu>
             </nav>
-            <div class="header__buttons">
-                <button class="header__button button button--text">Sign in</button>
-                <button class="header__button button button--menu">Sign Up</button>
+            <div class="header__buttons buttons">
+                <button class="buttons__in button button--text">Sign in</button>
+                <button class="buttons__up button button--menu hidden-mobile">Sign Up</button>
+                {{> mobile-menu }}
             </div>
         </div>
     </div>
