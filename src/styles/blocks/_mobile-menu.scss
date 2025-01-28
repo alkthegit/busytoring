@@ -8,6 +8,7 @@
 .mobile-menu {
     &__content {
         position: fixed;
+        z-index: 10;
         display: flex;
         flex-direction: column;
         justify-content: center;

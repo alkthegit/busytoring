@@ -17,9 +17,25 @@
 
 .hidden-mobile {
     @include mobile {
-        display: none;
+        display: none !important;
     }
 }
 .hidden {
     display: none !important;
+}
+.container-wrapper {
+    --headerPaddingInline: calc(210px - var(--container-padding-inline));
+
+    @include desktop-xl {
+        --headerPaddingInline: calc(150px - var(--container-padding-inline));
+    }
+
+    @include desktop {
+        --headerPaddingInline: calc(100px - var(--container-padding-inline));
+    }
+
+    @include tablet {
+        --headerPaddingInline: calc(20px - var(--container-padding-inline));
+        --headerContentHeight: 30px;
+    }
 }

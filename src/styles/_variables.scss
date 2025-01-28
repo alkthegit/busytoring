@@ -1,3 +1,5 @@
+@use 'media' as *;
+
 $container-width-value: 1180;
 $container-padding-inline-value: 20;
 $color-dark: #172755;
@@ -5,6 +7,8 @@ $color-dark: #172755;
 :root {
     --container-width: #{$container-width-value}px;
     --container-padding-inline: #{$container-padding-inline-value}px;
+    --headerPaddingBlock: 50px;
+    --headerContentHeight: 40px;
     --button-height: 50px;
     --color-light: #fff;
     --color-dark: #{$color-dark};
@@ -19,4 +23,12 @@ $color-dark: #172755;
     --buttonSecondaryBorderColor: #2A407C;
     --buttonMenuBorderColor: #465B95;
     --transitionDuration: 0.2s;
+
+    @include desktop {
+        --headerPaddingBlock: 30px;
+    }
+
+    @include mobile {
+        --headerPaddingBlock: 20px;
+    }
 }
