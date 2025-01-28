@@ -6,8 +6,8 @@
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0" />
   <title>Business Monitoring</title>
-  <script type="module" crossorigin src="./assets/index-CKWpcaDJ.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-BAHqzA79.css">
+  <script type="module" crossorigin src="./assets/index-DVbXuhKk.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-ClSq20Fp.css">
 </head>
 
 <body>
@@ -57,38 +57,44 @@
                   <button class="buttons__in button button--text">Sign in</button>
                   <button class="buttons__up button button--menu hidden-mobile">Sign Up</button>
                   <aside class="mobile-menu visible-mobile">
-                      <label for="mobileMenuToggler"></label>
-                      <input class="header__burger-button"
+                      <label class="mobile-menu__toggler mobile-menu__toggler-open"
+                          for="mobileMenuToggler"
+                          role="button"
+                          aria-label="open mobile menu"></label>
+                      <input class="mobile-menu__burger"
                           type="checkbox"
                           name="mobileMenuToggler"
-                          id="mobileMenuToggler">
-                      <nav class="header__mobile-menu">
-                          <ul class="header__mobile-menu-list">
-                              <li class="header__mobile-menu-item">
+                          id="mobileMenuToggler"
+                          aria-hidden="true">
+                      <nav class="mobile-menu__nav">
+                          <ul class="mobile-menu__list">
+                              <li class="mobile-menu__item">
                                   <a href="/"
-                                      class="header__mobile-menu-link">Products</a>
+                                      class="mobile-menu__link">Products</a>
                               </li>
-                              <li class="header__mobile-menu-item">
+                              <li class="mobile-menu__item">
                                   <a href="/"
-                                      class="header__mobile-menu-link">Pricing</a>
+                                      class="mobile-menu__link">Pricing</a>
                               </li>
-                              <li class="header__mobile-menu-item">
+                              <li class="mobile-menu__item">
                                   <a href="/"
-                                      class="header__mobile-menu-link">FAQ</a>
+                                      class="mobile-menu__link">FAQ</a>
                               </li>
-                              <li class="header__mobile-menu-item">
+                              <li class="mobile-menu__item">
                                   <a href="/"
-                                      class="header__mobile-menu-link">Blog</a>
+                                      class="mobile-menu__link">Blog</a>
                               </li>
-                              <li class="header__mobile-menu-item">
+                              <li class="mobile-menu__item">
                                   <a href="/"
-                                      class="header__mobile-menu-link">Blog</a>
+                                      class="mobile-menu__link">Blog</a>
                               </li>
                           </ul>
-                  
+                          <label class="mobile-menu__toggler mobile-menu__toggler-close"
+                              for="mobileMenuToggler"
+                              role="button"
+                              aria-label="close mobile menu"></label>
                       </nav>
-                  </aside>
-              </div>
+                  </aside>            </div>
           </div>
       </div>
   </header>
