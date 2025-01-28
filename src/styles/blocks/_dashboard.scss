@@ -1,0 +1,196 @@
+@use '../mixins' as *;
+@use '../media' as *;
+
+.dashboard {
+    position: relative;
+    --dashboardPaddingTop: 24px;
+    padding-inline: var(--headerPaddingInline);
+    background-color: var(--color-dark);
+
+    padding-top: var(--dashboardPaddingTop);
+
+    height: calc(100dvh - var(--headerContentHeight) - 2 * var(--headerPaddingBlock) - var(--dashboardPaddingTop));
+    height: calc(100svh - var(--headerContentHeight) - 2 * var(--headerPaddingBlock) - var(--dashboardPaddingTop));
+
+    &__inner {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 50px;
+        height: 100%;
+
+        @include desktop-xl {
+            column-gap: 30px;
+        }
+
+        @include desktop {
+            column-gap: 25px;
+        }
+
+        @include desktop {
+            column-gap: 20px;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+            row-gap: 26px;
+        }
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 50px;
+        max-width: min(50%, 550px);
+
+        @include mobile {
+            height: calc(100% - 20px);
+            max-width: 100%;
+            row-gap: 26px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+    }
+
+    &__title {
+        @include text-clamp(31, 50);
+        line-height: 1.2;
+        color: var(--color-light);
+        font-weight: 700;
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 1.5;
+
+        @include mobile {
+            max-height: 80px;
+            overflow-y: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    &__button {
+        width: 100%;
+    }
+
+    &__images {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        width: min(555px, 100%);
+
+        &-main {
+            position: absolute;
+            top: 50%;
+            translate: 0 -50%;
+            right: -114px;
+            width: 745px;
+            height: auto;
+            aspect-ratio: 1.47;
+            border-radius: 30px;
+            padding: 32px 25px 27px 32px;
+
+            @include desktop-xl {
+                width: 650px;
+            }
+
+            @include desktop {
+                width: 600px;
+                right: -140px;
+            }
+
+            @include tablet {
+                width: 450px;
+                right: -90px;
+            }
+
+            @include mobile {
+                display: none;
+            }
+
+        }
+
+        &-main-mobile {
+            border-radius: 12px;
+            padding: 10px 12px;
+            aspect-ratio: 1.47;
+            max-width: 60%;
+
+            @include tablet-up {
+                display: none;
+            }
+
+            @include xxs {
+                max-width: 100%;
+            }
+        }
+
+        &-chart {
+            position: absolute;
+            top: 50%;
+            translate: 0 -50%;
+            border-radius: 32px;
+            padding: 25px 35px 40px 26px;
+            width: 361px;
+            height: 247px;
+            aspect-ratio: 1.46;
+
+            z-index: 2;
+
+            @include desktop-xl {
+                width: 320px;
+                height: auto;
+            }
+
+            @include desktop {
+                width: 300px;
+                height: auto;
+            }
+
+            @include desktop {
+                width: 230px;
+                height: auto;
+            }
+        }
+    }
+
+    &__card {
+        background-color: var(--color-light);
+        box-shadow: 0px 20px 53px -15px #192a5933;
+    }
+
+    .bg-vector {
+        z-index: 0;
+        position: absolute;
+        opacity: 0.07;
+
+        &--top {
+            @include square(660px);
+
+            left: -100px;
+            top: -400px;
+
+            @include desktop-xl {
+                left: -160px;
+            }
+
+            @include desktop {
+                left: -200px;
+            }
+
+            @include tablet {
+                left: -305px;
+                top: -390px;
+            }
+        }
+    }
+}

@@ -7,6 +7,11 @@ $desktop: 1200px; // < xl
 $desktop-xl: 1400px; // < xxl
 $xxl: 1600px; // < xxl
 
+@mixin xxs {
+    @include media-breakpoint-down($xxs) {
+        @content;
+    }
+}
 @mixin xs {
     @include media-breakpoint-down($xs) {
         @content;

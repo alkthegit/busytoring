@@ -55,6 +55,8 @@ export default function registerTimestamp() {
             align-items: center;
             border-radius: 2px;
 
+            z-index: 999;
+
             p {
                 color: #FFFFFFC0;
                 line-height: 0;
