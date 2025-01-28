@@ -43,38 +43,7 @@
             <div class="header__buttons buttons">
                 <button class="buttons__in button button--text">Sign in</button>
                 <button class="buttons__up button button--menu hidden-mobile">Sign Up</button>
-                <aside class="mobile-menu visible-mobile">
-                    <label for="mobileMenuToggler"></label>
-                    <input class="header__burger-button"
-                        type="checkbox"
-                        name="mobileMenuToggler"
-                        id="mobileMenuToggler">
-                    <nav class="header__mobile-menu">
-                        <ul class="header__mobile-menu-list">
-                            <li class="header__mobile-menu-item">
-                                <a href="/"
-                                    class="header__mobile-menu-link">Products</a>
-                            </li>
-                            <li class="header__mobile-menu-item">
-                                <a href="/"
-                                    class="header__mobile-menu-link">Pricing</a>
-                            </li>
-                            <li class="header__mobile-menu-item">
-                                <a href="/"
-                                    class="header__mobile-menu-link">FAQ</a>
-                            </li>
-                            <li class="header__mobile-menu-item">
-                                <a href="/"
-                                    class="header__mobile-menu-link">Blog</a>
-                            </li>
-                            <li class="header__mobile-menu-item">
-                                <a href="/"
-                                    class="header__mobile-menu-link">Blog</a>
-                            </li>
-                        </ul>
-                
-                    </nav>
-                </aside>
+                {{> mobile-menu }}
             </div>
         </div>
     </div>

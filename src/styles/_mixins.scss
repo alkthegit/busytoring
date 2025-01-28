@@ -16,3 +16,13 @@
 @mixin text-clamp($min: 18, $max: 16) {
     font-size: clamp(#{$min}px, #{calc($max / $container-width-value * 100)}vw, #{$max}px);
 }
+@mixin square($width) {
+    width: $width;
+    aspect-ratio: 1;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

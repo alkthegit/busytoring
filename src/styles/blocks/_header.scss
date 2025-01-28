@@ -1,41 +1,44 @@
 @use '../media' as *;
+@use './nav-menu-link' as *;
 
 .header {
+    --headerPaddingInline: calc(210px - var(--container-padding-inline));
+    --headerPaddingBlock: 50px;
+    --headerContentHeight: 40px;
+
+    padding-inline: var(--headerPaddingInline);
     background-color: var(--color-dark);
 
-    @include xxl{
-        padding-inline: calc(210px - var(--container-padding-inline));
+    @include desktop-xl {
+        --headerPaddingInline: calc(150px - var(--container-padding-inline));
     }
 
-    @include desktop-xl{
-        padding-inline: calc(150px - var(--container-padding-inline));
+    @include desktop {
+        --headerPaddingInline: calc(100px - var(--container-padding-inline));
     }
 
-    @include desktop{
-        padding-inline: calc(100px - var(--container-padding-inline));
+    @include tablet {
+        --headerPaddingInline: calc(20px - var(--container-padding-inline));
+        --headerContentHeight: 30px;
     }
-    
-    @include tablet{
-        padding-inline: calc(20px - var(--container-padding-inline));
-    }
-    
+
     &__inner {
-        padding-block: 50px;
+        padding-block: var(--headerPaddingBlock);
         display: flex;
         align-items: center;
         column-gap: 80px;
-        
-        @include desktop-xl{
+
+        @include desktop-xl {
             column-gap: 50px;
         }
 
-        @include desktop{
+        @include desktop {
             column-gap: 20px;
-            padding-block: 30px;
+            --headerPaddingBlock: 30px;
         }
 
-        @include xs{
-            padding-block: 20px;
+        @include xs {
+            --headerPaddingBlock: 20px;
         }
     }
 
@@ -52,72 +55,77 @@
             display: flex;
             column-gap: 36px;
             align-items: center;
-            
-            @include desktop-xl{
+
+            @include desktop-xl {
                 column-gap: 30px;
             }
-            
-            @include desktop{
+
+            @include desktop {
                 column-gap: 20px;
             }
         }
 
         &-link {
-            padding-bottom: 1px;
-            position: relative;
+            @extend .nav-menu-link;
+            // padding-bottom: 1px;
+            // position: relative;
 
-            &::after {
-                content: "";
-                position: absolute;
-                bottom:0;
-                left: 50%;
-                translate: -50%;
-                width: 0;
-                height: 1px;
-                background-color: var(--color-light);
-                transition: all var(--transitionDuration) ease-in;
-            }
+            // &::after {
+            //     content: "";
+            //     position: absolute;
+            //     bottom: 0;
+            //     left: 50%;
+            //     translate: -50%;
+            //     width: 0;
+            //     height: 1px;
+            //     background-color: var(--color-light);
+            //     transition: all var(--transitionDuration) ease-in;
+            // }
 
-            &:hover, &:hover::after {
-                transition: all var(--transitionDuration) ease-in;
-            }
-            
-            &:hover{
-                color: var(--color-light);
-            }
-            &:hover::after{
-                width: 100%;
-            }
-            
+            // &:hover,
+            // &:hover::after {
+            //     transition: all var(--transitionDuration) ease-in;
+            // }
+
+            // &:hover {
+            //     color: var(--color-light);
+            // }
+
+            // &:hover::after {
+            //     width: 100%;
+            // }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        justify-content: end;
+
+        align-items: center;
+        column-gap: 40px;
+
+        @include desktop-xl {
+            column-gap: 30px;
         }
 
+        @include desktop {
+            column-gap: 25px;
+        }
+
+        @include mobile {
+            margin-left: auto;
+        }    
+
+        &__in {
+            flex-shrink: 0;
+        }
+
+        &__up {
+            @include tablet {
+                max-width: 120px;
+            }
+        }        
     }
 
 }
-
-.buttons {
-    display: flex;
-    justify-content: space-between;
-    justify-content: end;
-
-    align-items: center;
-    column-gap: 40px;
-
-    @include desktop-xl{
-        column-gap: 30px;
-    }
-    
-    @include desktop{
-        column-gap: 25px;
-    }
-
-    @include mobile{
-        margin-left: auto;
-    }
-
-    &__up {
-        @include tablet{
-            max-width: 120px;
-        }
-    }
-}    

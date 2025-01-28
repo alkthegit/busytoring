@@ -1,13 +1,15 @@
 @use '../media' as *;
+@use '../mixins' as *;
 
 .logo {
     --logo-vector-color: var(--color-accent);
     --logo-text-color: var(--color-light);
 
-    @include xs {
-        svg {
-            width: 138px;
-        }
+    @include flex-center;
+    
+    svg {
+        width: auto;
+        height: var(--headerContentHeight);
     }
 
     &--secondary {

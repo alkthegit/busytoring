@@ -1,12 +1,13 @@
 $container-width-value: 1180;
 $container-padding-inline-value: 20;
+$color-dark: #172755;
 
 :root {
     --container-width: #{$container-width-value}px;
     --container-padding-inline: #{$container-padding-inline-value}px;
     --button-height: 50px;
     --color-light: #fff;
-    --color-dark: #172755;
+    --color-dark: #{$color-dark};
     --ccolor-blue: #0088f0;
     --color-bg: #F8F9FF;
     --color-accent: #ef2a82;
