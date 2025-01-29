@@ -31,4 +31,8 @@ $color-dark: #172755;
     @include mobile {
         --headerPaddingBlock: 20px;
     }
+
+    @include xs {
+        --headerPaddingBlock: 15px;
+    }
 }

@@ -1,4 +1,4 @@
-@use 'sass:color' as *;
+@use 'sass:color' as color;
 @use '../variables' as *;
 @use '../mixins' as *;
 @use '../media' as *;
@@ -6,6 +6,8 @@
 @use './nav-menu-link' as *;
 
 .mobile-menu {
+    position: relative;
+    z-index: 10;
     &__content {
         position: fixed;
         z-index: 10;
@@ -24,7 +26,7 @@
         height: 100dvh;
         height: 100svh;
 
-        background-color: adjust-color($color-dark, $alpha: -0.1);
+        background-color: color.adjust($color-dark, $alpha: -0.1);
         transition: all var(--transitionDuration) ease-in;
 
         .mobile-menu__burger:checked+& {

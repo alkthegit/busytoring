@@ -54,6 +54,17 @@ $xxl: 1600px; // < xxl
     }
 }
 
+@mixin xxs-up {
+    @include media-breakpoint-up($xxs) {
+        @content;
+    }
+}
+
+@mixin xs-up {
+    @include media-breakpoint-up($xs) {
+        @content;
+    }
+}
 @mixin tablet-up {
     @include media-breakpoint-up($tablet) {
         @content;
